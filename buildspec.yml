@@ -9,8 +9,8 @@ phases:
       - npm install
   build:
     commands:
-      - echo "Building the project using Vite..."
-      - npm run build   # ng build 대신 이걸 써야 합니다!
+      - echo "Building with Vite..."
+      - npm run build   # ng build 대신 반드시 이걸 써야 합니다!
   post_build:
     commands:
       - echo "Build completed on `date`"
@@ -18,4 +18,4 @@ phases:
 artifacts:
   files:
     - '**/*'
-  base-directory: 'dist' # Vite 빌드 결과물도 보통 dist 폴더에 생깁니다.
+  base-directory: 'dist' # Vite 빌드 결과물은 dist 폴더에 생깁니다.
