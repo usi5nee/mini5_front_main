@@ -9,7 +9,7 @@ import Regist from "./mui/Regist.jsx";
 import Edit from "./mui/Edit.jsx";
 import Detail from "./mui/Detail.jsx";
 import Login from "./mui/Login.jsx";
-import SignUp from "./mui/SignUp.jsx";
+import SignUp from "./mui/signup.jsx";
 
 import { Routes, Route} from "react-router-dom";
 
