@@ -5,16 +5,17 @@ phases:
     runtime-versions:
       nodejs: 20
     commands:
-      - npm install -g @angular/cli@17
-  pre_build:
-    commands:
+      - echo "Installing dependencies..."
       - npm install
   build:
     commands:
-      # 만약 에러가 계속나면 'ls -al'을 추가해서 파일 목록을 로그로 확인해보세요
-      - ls -al 
-      - ng build --configuration production
+      - echo "Building the project using Vite..."
+      - npm run build   # ng build 대신 이걸 써야 합니다!
+  post_build:
+    commands:
+      - echo "Build completed on `date`"
+
 artifacts:
   files:
     - '**/*'
-  base-directory: 'dist' # 특정 폴더명 대신 dist 전체를 지정
+  base-directory: 'dist' # Vite 빌드 결과물도 보통 dist 폴더에 생깁니다.
