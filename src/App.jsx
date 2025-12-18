@@ -5,7 +5,7 @@ import { mockData } from "./data/MockData";
 import ResponsiveAppBar from "./mui/toolbar.jsx";
 import BookList from "./mui/BookList.jsx";
 import Regist from "./mui/Regist.jsx";
-//import MainPage from "./mui/MainPage.jsx";  // 필요 없다면 지워도 됨
+import MainPage from "./mui/MainPage.jsx";  // 필요 없다면 지워도 됨
 import Edit from "./mui/Edit.jsx";
 import Detail from "./mui/Detail.jsx";
 import Login from "./mui/Login.jsx";
