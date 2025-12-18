@@ -1,4 +1,5 @@
 version: 0.2
+
 phases:
   install:
     runtime-versions:
@@ -10,11 +11,10 @@ phases:
       - npm install
   build:
     commands:
-      - ng build -c production
-      - echo "Build completed."
-    finally:
-      - echo This is the finally block execution!
+      # 만약 에러가 계속나면 'ls -al'을 추가해서 파일 목록을 로그로 확인해보세요
+      - ls -al 
+      - ng build --configuration production
 artifacts:
-  base-directory: dist/my-angular-project
   files:
     - '**/*'
+  base-directory: 'dist' # 특정 폴더명 대신 dist 전체를 지정
